@@ -12,7 +12,7 @@ import Map from "../components/Map"
 import Logo from "../assets/logo.svg";
 import "./App.css";
 import { loadCities } from "../utils/loadCities";
-import {COLORS} from "../assets/colors";
+import { COLORS } from "../assets/colors";
 
 function App() {
   const [initialNetwork, setInitialNetwork] = React.useState(0);
@@ -37,22 +37,28 @@ function App() {
     let result = ""
 
     result += `${spottedRoute[0]} `
-    for (let aux = 1; aux < spottedRoute.length; aux++){
+    for (let aux = 1; aux < spottedRoute.length; aux++) {
       result += `► ${spottedRoute[aux]}`;
     }
-    
+
     setRoute(result);
     changeRouteColor(spottedRoute);
   };
 
   function changeRouteColor(newRoute) {
-    // console.log(newRoute)
-    document.querySelectorAll(`circle[class="WAN"]`).forEach(el => el.style.fill = COLORS.lightblue)
-    document.querySelectorAll(`circle[class="LAN"]`).forEach(el => el.style.fill = COLORS.bluegreen)
-    document.querySelector(`circle[id="${newRoute[0]}"]`).style.fill = COLORS.orange;
-    document.querySelector(`circle[id="${newRoute[newRoute.length - 1]}"]`).style.fill = COLORS.orange;
-    for(let aux = 1; aux < newRoute.length - 1; aux++)
-      document.querySelector(`circle[id="${newRoute[aux]}"]`).style.fill = COLORS.orangelight;
+    document.querySelectorAll(`line[class="connection"]`).forEach(el => el.style.stroke = COLORS.oceanblueWAN)
+
+
+    for (let aux = 0; aux < newRoute.length - 1; aux++) {
+      let connection = [newRoute[aux], newRoute[aux + 1]]
+      connection = connection.sort()
+
+      setTimeout(() => {
+        document.querySelector(`line[id="${connection[0] + '-' + connection[1]}"]`).style.stroke = COLORS.orangelight;
+      }, 250*aux)
+    }
+
+
   }
 
   return (
@@ -120,63 +126,63 @@ function App() {
           </Card>
         </Grid>
         <Grid item xs={9.5}>
-          <Box sx={{ height: "100%"}}>
-          <Grid
-            container
-            direction="column"
-            sx={{ height: "100%"}}
-          >
+          <Box sx={{ height: "100%" }}>
             <Grid
-              item
-              xs={9}
-              alignSelf={"center"}
-              sx={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: COLORS.lightgrey,
-              }}
+              container
+              direction="column"
+              sx={{ height: "100%" }}
             >
-              <Map />
-            </Grid>
-            <Grid item xs={2}>
-              <Card
-                variant="outlined"
+              <Grid
+                item
+                xs={9}
+                alignSelf={"center"}
                 sx={{
-                  height: "fill-available",
-                  backgroundColor: COLORS.beige,
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: COLORS.lightgrey,
                 }}
               >
-                <Typography
-                  variant="h4"
-                  color="text.secondary"
-                  component="div"
+                <Map />
+              </Grid>
+              <Grid item xs={2}>
+                <Card
+                  variant="outlined"
                   sx={{
-                    fontSize: 24,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Menor Rota
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="div"
-                  sx={{
-                    fontSize: 18,
                     height: "fill-available",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    backgroundColor: COLORS.beige,
                   }}
                 >
-                  {route}
-                </Typography>
-              </Card>
+                  <Typography
+                    variant="h4"
+                    color="text.secondary"
+                    component="div"
+                    sx={{
+                      fontSize: 24,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    Menor Rota
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    component="div"
+                    sx={{
+                      fontSize: 18,
+                      height: "fill-available",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {route}
+                  </Typography>
+                </Card>
+              </Grid>
             </Grid>
-          </Grid>
           </Box>
         </Grid>
       </Grid>
