@@ -261,6 +261,7 @@ export default function Map(props) {
             y2="105.543"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM1-AM2"
           />
           <line
             x1="258.902"
@@ -269,6 +270,7 @@ export default function Map(props) {
             y2="105.995"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM2-AM3"
           />
           <line
             x1="258.151"
@@ -277,6 +279,7 @@ export default function Map(props) {
             y2="56.5287"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM3-RR1"
           />
           <line
             x1="258.511"
@@ -285,6 +288,7 @@ export default function Map(props) {
             y2="79.1277"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM3-PA1"
           />
           <line
             x1="364.129"
@@ -293,6 +297,7 @@ export default function Map(props) {
             y2="80.4908"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PA1-PA2"
           />
           <line
             x1="364.485"
@@ -301,6 +306,7 @@ export default function Map(props) {
             y2="108.142"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PA2-PA3"
           />
           <line
             x1="497.684"
@@ -309,6 +315,7 @@ export default function Map(props) {
             y2="109.949"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MA1-PA3"
           />
           <line
             x1="498.992"
@@ -317,6 +324,7 @@ export default function Map(props) {
             y2="177.127"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MA1-MA2"
           />
           <line
             x1="516.212"
@@ -325,6 +333,7 @@ export default function Map(props) {
             y2="177.616"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MA2-PI2"
           />
           <line
             x1="517.376"
@@ -333,6 +342,7 @@ export default function Map(props) {
             y2="237.927"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PI2-TO1"
           />
           <line
             x1="516.548"
@@ -341,6 +351,7 @@ export default function Map(props) {
             y2="237.892"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="BA1-TO1"
           />
           <line
             x1="417.1"
@@ -349,6 +360,7 @@ export default function Map(props) {
             y2="236.564"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="GO1-TO1"
           />
           <line
             x1="417.369"
@@ -357,6 +369,7 @@ export default function Map(props) {
             y2="264.776"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="GO1-MT2"
           />
           <line
             x1="418.927"
@@ -365,6 +378,7 @@ export default function Map(props) {
             y2="351.374"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="GO1-GO2"
           />
           <line
             x1="305.775"
@@ -373,6 +387,7 @@ export default function Map(props) {
             y2="350.026"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="GO2-MS1"
           />
           <line
             x1="305.036"
@@ -381,6 +396,7 @@ export default function Map(props) {
             y2="313.734"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MS1-MT3"
           />
           <line
             x1="306.782"
@@ -389,6 +405,7 @@ export default function Map(props) {
             y2="420.377"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MS1-MS2"
           />
           <line
             x1="387.338"
@@ -397,6 +414,7 @@ export default function Map(props) {
             y2="421.749"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MS2-PR1"
           />
           <line
             x1="388.807"
@@ -405,6 +423,7 @@ export default function Map(props) {
             y2="499.409"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PR1-SC1"
           />
           <line
             x1="462.802"
@@ -413,6 +432,7 @@ export default function Map(props) {
             y2="500.598"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="SC1-SP2"
           />
           <line
             x1="461.395"
@@ -421,6 +441,7 @@ export default function Map(props) {
             y2="402.204"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MG2-SP2"
           />
           <line
             x1="461.464"
@@ -429,6 +450,7 @@ export default function Map(props) {
             y2="408.844"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="SP1-SP2"
           />
           <line
             x1="397.975"
@@ -437,6 +459,7 @@ export default function Map(props) {
             y2="407.778"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="GO2-SP1"
           />
           <line
             x1="388.962"
@@ -445,6 +468,7 @@ export default function Map(props) {
             y2="537.271"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PR1-RS1"
           />
           <line
             x1="452.441"
@@ -453,6 +477,7 @@ export default function Map(props) {
             y2="351.898"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="DF1-G02"
           />
           <line
             x1="452.085"
@@ -461,6 +486,7 @@ export default function Map(props) {
             y2="327.004"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="DF1-MG1"
           />
           <line
             x1="517.952"
@@ -469,14 +495,16 @@ export default function Map(props) {
             y2="328.306"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="BA1-MG1"
           />
           <line
             x1="585.54"
             y1="373.888"
             x2="498.54"
             y2="328.888"
-            stroke={COLORS.oceanblueWAN}
+            stroke={COLORS.oceanbOlueWAN}
             stroke-width="2"
+            class="ES1-MG1"
           />
           <line
             x1="511.013"
@@ -485,6 +513,7 @@ export default function Map(props) {
             y2="328.164"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MG1-MG2"
           />
           <line
             x1="512.266"
@@ -493,6 +522,7 @@ export default function Map(props) {
             y2="418.036"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MG2-RJ1"
           />
           <line
             x1="586.867"
@@ -501,6 +531,7 @@ export default function Map(props) {
             y2="419.498"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="ES1-RJ1"
           />
           <line
             x1="516.736"
@@ -509,6 +540,7 @@ export default function Map(props) {
             y2="254.036"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="BA1-BA2"
           />
           <line
             x1="618.756"
@@ -517,6 +549,7 @@ export default function Map(props) {
             y2="255.655"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="BA2-PE1"
           />
           <line
             x1="618.904"
@@ -525,6 +558,7 @@ export default function Map(props) {
             y2="245.573"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PE1-SE1"
           />
           <line
             x1="618.507"
@@ -533,6 +567,7 @@ export default function Map(props) {
             y2="229.138"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AL1-PE1"
           />
           <line
             x1="617.051"
@@ -541,6 +576,7 @@ export default function Map(props) {
             y2="153.316"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="CE1-PE1"
           />
           <line
             x1="642.697"
@@ -549,6 +585,7 @@ export default function Map(props) {
             y2="153.953"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="CE1-RN1"
           />
           <line
             x1="643.691"
@@ -557,6 +594,7 @@ export default function Map(props) {
             y2="187.277"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PB1-RN1"
           />
           <line
             x1="651.045"
@@ -565,6 +603,7 @@ export default function Map(props) {
             y2="187.704"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AL1-PB1"
           />
           <line
             x1="498.523"
@@ -573,6 +612,7 @@ export default function Map(props) {
             y2="164.148"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MA1-PI1"
           />
           <line
             x1="599.263"
@@ -581,6 +621,7 @@ export default function Map(props) {
             y2="165.965"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="CE1-PI1"
           />
           <line
             x1="380.558"
@@ -589,6 +630,7 @@ export default function Map(props) {
             y2="108.17"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AP1-PA3"
           />
           <line
             x1="380.144"
@@ -597,6 +639,7 @@ export default function Map(props) {
             y2="80.9896"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AP1-PA1"
           />
           <line
             x1="365.798"
@@ -605,6 +648,7 @@ export default function Map(props) {
             y2="204.602"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PA2-PA4"
           />
           <line
             x1="259.797"
@@ -613,6 +657,7 @@ export default function Map(props) {
             y2="203.396"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM3-PA4"
           />
           <line
             x1="169.219"
@@ -621,6 +666,7 @@ export default function Map(props) {
             y2="203.024"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM1-PA4"
           />
           <line
             x1="169.345"
@@ -629,6 +675,7 @@ export default function Map(props) {
             y2="216.939"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AC1-AM1"
           />
           <line
             x1="169.913"
@@ -637,6 +684,7 @@ export default function Map(props) {
             y2="233.593"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM1-RO1"
           />
           <line
             x1="283.752"
@@ -645,6 +693,7 @@ export default function Map(props) {
             y2="234.969"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MT1-RO1"
           />
           <line
             x1="284.836"
@@ -653,6 +702,7 @@ export default function Map(props) {
             y2="313.452"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MT1-MT3"
           />
           <line
             x1="284.087"
@@ -661,6 +711,7 @@ export default function Map(props) {
             y2="263.004"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MT1-MT2"
           />
           <line
             x1="365.996"
@@ -669,6 +720,7 @@ export default function Map(props) {
             y2="263.912"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MT2-PA2"
           />
           <line
             x1="283.215"
@@ -677,6 +729,7 @@ export default function Map(props) {
             y2="203.381"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MT1-PA4"
           />
           <line
             x1="169"
@@ -685,6 +738,7 @@ export default function Map(props) {
             y2="170"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM1-Ipixuna"
           />
           <line
             x1="198.825"
@@ -693,6 +747,7 @@ export default function Map(props) {
             y2="271.435"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Cacoal-RO1"
           />
           <line
             x1="41.2234"
@@ -701,6 +756,7 @@ export default function Map(props) {
             y2="226.025"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AC1-Rio Branco"
           />
           <line
             x1="127.633"
@@ -709,6 +765,7 @@ export default function Map(props) {
             y2="92.9304"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM2-Barreira"
           />
           <line
             x1="258.037"
@@ -717,6 +774,7 @@ export default function Map(props) {
             y2="92.2696"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AM3-Babacal"
           />
           <line
             x1="317.022"
@@ -725,6 +783,7 @@ export default function Map(props) {
             y2="79.7925"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Curuá-PA1"
           />
           <line
             x1="354.602"
@@ -733,6 +792,7 @@ export default function Map(props) {
             y2="203.918"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PA4-Panará"
           />
           <line
             x1="278.006"
@@ -741,6 +801,7 @@ export default function Map(props) {
             y2="255.89"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Jauru-MT1"
           />
           <line
             x1="398.736"
@@ -749,6 +810,7 @@ export default function Map(props) {
             y2="264.677"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Ipê-MT2"
           />
           <line
             x1="402.794"
@@ -757,6 +819,7 @@ export default function Map(props) {
             y2="151.979"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Marabá-PA2"
           />
           <line
             x1="458.241"
@@ -765,6 +828,7 @@ export default function Map(props) {
             y2="109.651"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PA3-Paragominas"
           />
           <line
             x1="220.026"
@@ -773,6 +837,7 @@ export default function Map(props) {
             y2="25.7728"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Boa Vista-RR1"
           />
           <line
             x1="379.569"
@@ -781,6 +846,7 @@ export default function Map(props) {
             y2="60.0979"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AP1-Macapá"
           />
           <line
             x1="531"
@@ -789,6 +855,7 @@ export default function Map(props) {
             y2="131"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Chapadinha-MA1"
           />
           <line
             x1="469.412"
@@ -797,14 +864,16 @@ export default function Map(props) {
             y2="174.191"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MA2-Riachão"
           />
           <line
             x1="538.955"
             y1="212.999"
             x2="516.955"
             y2="211.999"
-            stroke={COLORS.oceanblueWAN}
+            stroke={COLORS.oceanborlueWAN}
             stroke-width="2"
+            class="Brejo-PI2"
           />
           <line
             x1="554"
@@ -813,6 +882,7 @@ export default function Map(props) {
             y2="163"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PI1-Picos"
           />
           <line
             x1="593.017"
@@ -821,6 +891,7 @@ export default function Map(props) {
             y2="152.818"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="CE1-Iguatu"
           />
           <line
             x1="663.952"
@@ -829,6 +900,7 @@ export default function Map(props) {
             y2="166.999"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Natal-RN1"
           />
           <line
             x1="622.976"
@@ -837,6 +909,7 @@ export default function Map(props) {
             y2="187"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Cajazeiras-PB1"
           />
           <line
             x1="617.859"
@@ -845,6 +918,7 @@ export default function Map(props) {
             y2="205.99"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="PE1-Trindade"
           />
           <line
             x1="651.757"
@@ -853,6 +927,7 @@ export default function Map(props) {
             y2="225.97"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="AL1-Camarão"
           />
           <line
             x1="632.024"
@@ -861,6 +936,7 @@ export default function Map(props) {
             y2="245.783"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Lagarto-SE1"
           />
           <line
             x1="582.01"
@@ -869,6 +945,7 @@ export default function Map(props) {
             y2="255.141"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="BA2-Itaberaba"
           />
           <line
             x1="517.636"
@@ -877,6 +954,7 @@ export default function Map(props) {
             y2="286.772"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="BA1-Correntina"
           />
           <line
             x1="417.737"
@@ -885,6 +963,7 @@ export default function Map(props) {
             y2="292.035"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="GO1-Minaçu"
           />
           <line
             x1="448.939"
@@ -893,6 +972,7 @@ export default function Map(props) {
             y2="266.656"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Bonfim-T01"
           />
           <line
             x1="452.894"
@@ -901,6 +981,7 @@ export default function Map(props) {
             y2="333.553"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Brasília-DF1"
           />
           <line
             x1="535.973"
@@ -909,6 +990,7 @@ export default function Map(props) {
             y2="331"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MG1-Montes Claros"
           />
           <line
             x1="511.368"
@@ -917,6 +999,7 @@ export default function Map(props) {
             y2="372.775"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MG2-Patos de Minas"
           />
           <line
             x1="397.129"
@@ -925,6 +1008,7 @@ export default function Map(props) {
             y2="353.008"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Caldas Novas-GO2"
           />
           <line
             x1="322.637"
@@ -933,6 +1017,7 @@ export default function Map(props) {
             y2="333.229"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Itiquira-MT3"
           />
           <line
             x1="306.753"
@@ -941,6 +1026,7 @@ export default function Map(props) {
             y2="388.659"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Miranda-MS1"
           />
           <line
             x1="362.707"
@@ -949,6 +1035,7 @@ export default function Map(props) {
             y2="421.707"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="MS2-Recreio"
           />
           <line
             x1="426.238"
@@ -957,6 +1044,7 @@ export default function Map(props) {
             y2="408.648"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Bauru-SP1"
           />
           <line
             x1="461.015"
@@ -965,6 +1053,7 @@ export default function Map(props) {
             y2="418.171"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Leme-SP2"
           />
           <line
             x1="525.737"
@@ -973,6 +1062,7 @@ export default function Map(props) {
             y2="418.035"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Petrópolis-RJ1"
           />
           <line
             x1="563.263"
@@ -981,6 +1071,7 @@ export default function Map(props) {
             y2="372.324"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Castelo-ES1"
           />
           <line
             x1="364.709"
@@ -989,6 +1080,7 @@ export default function Map(props) {
             y2="457.043"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Cascavel-PR1"
           />
           <line
             x1="390.071"
@@ -997,6 +1089,7 @@ export default function Map(props) {
             y2="499.003"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Catanduvas-SC1"
           />
           <line
             x1="364"
@@ -1005,6 +1098,7 @@ export default function Map(props) {
             y2="536.97"
             stroke={COLORS.oceanblueWAN}
             stroke-width="2"
+            class="Pelotas-RS1"
           />
           <circle
             id="SC1"
