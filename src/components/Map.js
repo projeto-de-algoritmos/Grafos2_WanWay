@@ -1197,6 +1197,7 @@ export default function Map(props) {
           <circle
             id="SC1"
             class="WAN"
+            latency={0}
             cx="418.5"
             cy="499.5"
             r="12.5"
@@ -1209,6 +1210,7 @@ export default function Map(props) {
           <circle
             id="RS1"
             class="WAN"
+            latency={0}
             cx="366.5"
             cy="536.5"
             r="12.5"
@@ -1221,6 +1223,7 @@ export default function Map(props) {
           <circle
             id="PR1"
             class="WAN"
+            latency={0}
             cx="388.5"
             cy="457.5"
             r="12.5"
@@ -1233,6 +1236,7 @@ export default function Map(props) {
           <circle
             id="MS2"
             class="WAN"
+            latency={0}
             cx="345.5"
             cy="420.5"
             r="12.5"
@@ -1245,6 +1249,7 @@ export default function Map(props) {
           <circle
             id="MS1"
             class="WAN"
+            latency={0}
             cx="306.5"
             cy="371.5"
             r="12.5"
@@ -1257,6 +1262,7 @@ export default function Map(props) {
           <circle
             id="SP2"
             class="WAN"
+            latency={0}
             cx="462.5"
             cy="440.5"
             r="12.5"
@@ -1269,6 +1275,7 @@ export default function Map(props) {
           <circle
             id="SP1"
             class="WAN"
+            latency={0}
             cx="410.5"
             cy="407.5"
             r="12.5"
@@ -1281,6 +1288,7 @@ export default function Map(props) {
           <circle
             id="RJ1"
             class="WAN"
+            latency={0}
             cx="558.5"
             cy="418.5"
             r="12.5"
@@ -1293,6 +1301,7 @@ export default function Map(props) {
           <circle
             id="ES1"
             class="WAN"
+            latency={0}
             cx="585.5"
             cy="372.5"
             r="12.5"
@@ -1305,6 +1314,7 @@ export default function Map(props) {
           <circle
             id="MG2"
             class="WAN"
+            latency={0}
             cx="512.5"
             cy="402.5"
             r="12.5"
@@ -1317,6 +1327,7 @@ export default function Map(props) {
           <circle
             id="MG1"
             class="WAN"
+            latency={0}
             cx="499.5"
             cy="329.5"
             r="12.5"
@@ -1329,6 +1340,7 @@ export default function Map(props) {
           <circle
             id="DF1"
             class="WAN"
+            latency={0}
             cx="452.5"
             cy="323.5"
             r="12.5"
@@ -1341,6 +1353,7 @@ export default function Map(props) {
           <circle
             id="GO2"
             class="WAN"
+            latency={0}
             cx="397.5"
             cy="350.5"
             r="12.5"
@@ -1353,6 +1366,7 @@ export default function Map(props) {
           <circle
             id="GO1"
             class="WAN"
+            latency={0}
             cx="418.5"
             cy="298.5"
             r="12.5"
@@ -1365,6 +1379,7 @@ export default function Map(props) {
           <circle
             id="TO1"
             class="WAN"
+            latency={0}
             cx="448.5"
             cy="236.5"
             r="12.5"
@@ -1377,6 +1392,7 @@ export default function Map(props) {
           <circle
             id="BA2"
             class="WAN"
+            latency={0}
             cx="578.5"
             cy="254.5"
             r="12.5"
@@ -1389,6 +1405,7 @@ export default function Map(props) {
           <circle
             id="BA1"
             class="WAN"
+            latency={0}
             cx="517.5"
             cy="271.5"
             r="12.5"
@@ -1401,6 +1418,7 @@ export default function Map(props) {
           <circle
             id="SE1"
             class="WAN"
+            latency={0}
             cx="634.5"
             cy="245.5"
             r="12.5"
@@ -1413,6 +1431,7 @@ export default function Map(props) {
           <circle
             id="AL1"
             class="WAN"
+            latency={0}
             cx="651.5"
             cy="230.5"
             r="12.5"
@@ -1425,6 +1444,7 @@ export default function Map(props) {
           <circle
             id="PE1"
             class="WAN"
+            latency={0}
             cx="617.5"
             cy="209.5"
             r="12.5"
@@ -1437,6 +1457,7 @@ export default function Map(props) {
           <circle
             id="PB1"
             class="WAN"
+            latency={0}
             cx="664.5"
             cy="188.5"
             r="12.5"
@@ -1449,6 +1470,7 @@ export default function Map(props) {
           <circle
             id="RN1"
             class="WAN"
+            latency={0}
             cx="642.5"
             cy="166.5"
             r="12.5"
@@ -1461,6 +1483,7 @@ export default function Map(props) {
           <circle
             id="CE1"
             class="WAN"
+            latency={0}
             cx="598.5"
             cy="153.5"
             r="12.5"
@@ -1473,6 +1496,7 @@ export default function Map(props) {
           <circle
             id="PI2"
             class="WAN"
+            latency={0}
             cx="517.5"
             cy="209.5"
             r="12.5"
@@ -1485,6 +1509,7 @@ export default function Map(props) {
           <circle
             id="PI1"
             class="WAN"
+            latency={0}
             cx="554.5"
             cy="164.5"
             r="12.5"
@@ -1497,6 +1522,7 @@ export default function Map(props) {
           <circle
             id="MA2"
             class="WAN"
+            latency={0}
             cx="492.5"
             cy="175.5"
             r="12.5"
@@ -1509,6 +1535,7 @@ export default function Map(props) {
           <circle
             id="MA1"
             class="WAN"
+            latency={0}
             cx="497.5"
             cy="130.5"
             r="12.5"
@@ -1521,6 +1548,7 @@ export default function Map(props) {
           <circle
             id="AP1"
             class="WAN"
+            latency={0}
             cx="380.5"
             cy="72.5"
             r="12.5"
@@ -1533,6 +1561,7 @@ export default function Map(props) {
           <circle
             id="RR1"
             class="WAN"
+            latency={0}
             cx="221.5"
             cy="56.5"
             r="12.5"
@@ -1545,6 +1574,7 @@ export default function Map(props) {
           <circle
             id="MT3"
             class="WAN"
+            latency={0}
             cx="322.5"
             cy="313.5"
             r="12.5"
@@ -1557,6 +1587,7 @@ export default function Map(props) {
           <circle
             id="MT2"
             class="WAN"
+            latency={0}
             cx="375.5"
             cy="263.5"
             r="12.5"
@@ -1569,6 +1600,7 @@ export default function Map(props) {
           <circle
             id="MT1"
             class="WAN"
+            latency={0}
             cx="284.5"
             cy="255.5"
             r="12.5"
@@ -1581,6 +1613,7 @@ export default function Map(props) {
           <circle
             id="PA4"
             class="WAN"
+            latency={0}
             cx="325.5"
             cy="203.5"
             r="12.5"
@@ -1593,6 +1626,7 @@ export default function Map(props) {
           <circle
             id="PA2"
             class="WAN"
+            latency={0}
             cx="365.5"
             cy="151.5"
             r="12.5"
@@ -1605,6 +1639,7 @@ export default function Map(props) {
           <circle
             id="PA3"
             class="WAN"
+            latency={0}
             cx="435.5"
             cy="109.5"
             r="12.5"
@@ -1617,6 +1652,7 @@ export default function Map(props) {
           <circle
             id="PA1"
             class="WAN"
+            latency={0}
             cx="325.5"
             cy="80.5"
             r="12.5"
@@ -1629,6 +1665,7 @@ export default function Map(props) {
           <circle
             id="AM3"
             class="WAN"
+            latency={0}
             cx="259.5"
             cy="117.5"
             r="12.5"
@@ -1641,6 +1678,7 @@ export default function Map(props) {
           <circle
             id="AM2"
             class="WAN"
+            latency={0}
             cx="128.5"
             cy="105.5"
             r="12.5"
@@ -1653,6 +1691,7 @@ export default function Map(props) {
           <circle
             id="AM1"
             class="WAN"
+            latency={0}
             cx="169.5"
             cy="169.5"
             r="12.5"
@@ -1665,6 +1704,7 @@ export default function Map(props) {
           <circle
             id="RO1"
             class="WAN"
+            latency={0}
             cx="198.5"
             cy="233.5"
             r="12.5"
@@ -1677,6 +1717,7 @@ export default function Map(props) {
           <circle
             id="AC1"
             class="WAN"
+            latency={0}
             cx="41.5"
             cy="216.5"
             r="12.5"
