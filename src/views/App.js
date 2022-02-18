@@ -22,6 +22,24 @@ function App() {
   );
   const cities = loadCities();
 
+  function changeWanLatency(currentLatency){
+    return (currentLatency + 1 ) % 4
+  }
+
+  React.useEffect(() => {
+    document.querySelectorAll(`circle[class="WAN"]`).forEach((el) =>
+      el.addEventListener(
+        "click",
+        function () {
+          var currentLatency = el.getAttribute("latency");
+          el.setAttribute("latency", changeWanLatency(parseInt(currentLatency)).toString());
+          console.log(`${el.getAttribute("id")} : ${currentLatency} latencia atual`);
+        },
+        false
+      )
+    );
+  }, []);
+
   const handleRedeInicial = (e, newValue) => {
     setInitialNetwork(newValue.id);
     console.log(e);
