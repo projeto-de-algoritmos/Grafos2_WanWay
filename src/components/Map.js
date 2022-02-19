@@ -22,7 +22,7 @@ export default function Map() {
     <ReactSVGPanZoom
       ref = {Viewer}
       width = {width}
-      height = {height - 200}
+      height = {height}
       tool = {tool}
       onChangeTool = {setTool}
       value = {value}

@@ -187,7 +187,7 @@ function App() {
             <Grid container direction="column" sx={{ height: "100%" }}>
               <Grid
                 item
-                xs={9}
+                xs={12}
                 alignSelf={"center"}
                 sx={{
                   width: "100%",
@@ -198,42 +198,6 @@ function App() {
                 }}
               >
                 <Map />
-              </Grid>
-              <Grid item xs={2}>
-                <Card
-                  variant="outlined"
-                  sx={{
-                    height: "fill-available",
-                    backgroundColor: COLORS.beige,
-                  }}
-                >
-                  <Typography
-                    variant="h4"
-                    color="text.secondary"
-                    component="div"
-                    sx={{
-                      fontSize: 24,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    Menor Rota
-                  </Typography>
-                  <Typography
-                    variant="h6"
-                    component="div"
-                    sx={{
-                      fontSize: 18,
-                      height: "fill-available",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {route}
-                  </Typography>
-                </Card>
               </Grid>
             </Grid>
           </Box>
