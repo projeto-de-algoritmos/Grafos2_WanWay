@@ -80,13 +80,13 @@ function App() {
 
       if(networkGraph.find(elGraph => elGraph.name === newRoute[aux + 1]).latency){
       const latencyConection = networkGraph.find(elGraph => elGraph.name === newRoute[aux + 1]).latency
-      latency = latency + latencyConection
+      latency = latency + (latencyConection * 500)
       console.log(latencyConection + latency)
     }
       
       setTimeout(() => {
         document.querySelector(`line[id="${connection[0] + '-' + connection[1]}"]`).style.stroke = COLORS.orangelight;
-      }, 250 * aux * latency)
+      }, latency)
     }
 
 
