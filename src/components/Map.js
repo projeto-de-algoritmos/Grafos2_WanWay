@@ -8,7 +8,7 @@ import {COLORS} from "../assets/colors";
 import { useWindowDimensions } from "../utils/useWindowDimensions";
 
 
-export default function Map(props) {
+export default function Map() {
   const Viewer = useRef();
   const [tool, setTool] = useState(TOOL_NONE);
   const [value, setValue] = useState(INITIAL_VALUE);
