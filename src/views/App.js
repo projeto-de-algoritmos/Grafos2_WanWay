@@ -21,6 +21,31 @@ function App() {
     "Preencha os dados e encontre uma rota de internet entre as duas cidades!"
   );
   const cities = loadCities();
+  const networkGraph = require("../data/graph.json");
+
+  function changeWanLatency(currentLatency) {
+    return (currentLatency + 1) % 4
+  }
+
+  React.useEffect(() => {
+    const colors = [COLORS.green, COLORS.yellow, COLORS.orange, COLORS.red]
+
+    document.querySelectorAll(`circle[class="WAN"]`).forEach((el) =>
+      el.addEventListener(
+        "click",
+        function () {
+          var currentLatency = el.getAttribute("latency");
+          currentLatency = changeWanLatency(parseInt(currentLatency)).toString()
+          el.setAttribute("latency", currentLatency);
+          el.style.fill = colors[currentLatency]
+          networkGraph.find(elGraph => elGraph.name === el.getAttribute("id")).latency = parseInt(currentLatency)
+          console.log(networkGraph.find(elGraph => elGraph.name === el.getAttribute("id")))
+        },
+        false
+      )
+    );
+
+  }, []);
 
   const handleRedeInicial = (e, newValue) => {
     setInitialNetwork(newValue.id);
@@ -33,7 +58,7 @@ function App() {
   };
 
   const handlePesquisa = () => {
-    const spottedRoute = findRouteBFS(initialNetwork, finalNetwork)
+    const spottedRoute = findRouteBFS(initialNetwork, finalNetwork, networkGraph)
     let result = ""
 
     result += `${spottedRoute[0]} `
@@ -47,15 +72,21 @@ function App() {
 
   function changeRouteColor(newRoute) {
     document.querySelectorAll(`line[class="connection"]`).forEach(el => el.style.stroke = COLORS.oceanblueWAN)
-
+    let latency = 0
 
     for (let aux = 0; aux < newRoute.length - 1; aux++) {
       let connection = [newRoute[aux], newRoute[aux + 1]]
       connection = connection.sort()
 
+      if(networkGraph.find(elGraph => elGraph.name === newRoute[aux + 1]).latency){
+      const latencyConection = networkGraph.find(elGraph => elGraph.name === newRoute[aux + 1]).latency
+      latency = latency + (latencyConection * 500)
+      console.log(latencyConection + latency)
+    }
+      
       setTimeout(() => {
         document.querySelector(`line[id="${connection[0] + '-' + connection[1]}"]`).style.stroke = COLORS.orangelight;
-      }, 250*aux)
+      }, latency)
     }
 
 

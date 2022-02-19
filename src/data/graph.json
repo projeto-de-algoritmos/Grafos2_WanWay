@@ -2,6 +2,7 @@
     {
         "id": 0,
         "name": "RR1",
+        "latency": 0,
         "connectedWAN": [
             3
         ],
@@ -10,6 +11,7 @@
     {
         "id": 1,
         "name": "AM1",
+        "latency": 0,
         "connectedWAN": [
             2,
             4,
@@ -21,6 +23,7 @@
     {
         "id": 2,
         "name": "AM2",
+        "latency": 0,
         "connectedWAN": [
             1,
             3
@@ -30,6 +33,7 @@
     {
         "id": 3,
         "name": "AM3",
+        "latency": 0,
         "connectedWAN": [
             0,
             2,
@@ -41,6 +45,7 @@
     {
         "id": 4,
         "name": "AC1",
+        "latency": 0,
         "connectedWAN": [
             1
         ],
@@ -49,6 +54,7 @@
     {
         "id": 5,
         "name": "RO1",
+        "latency": 0,
         "connectedWAN": [
             1,
             24
@@ -58,6 +64,7 @@
     {
         "id": 6,
         "name": "PA1",
+        "latency": 0,
         "connectedWAN": [
             3,
             7,
@@ -68,6 +75,7 @@
     {
         "id": 7,
         "name": "PA2",
+        "latency": 0,
         "connectedWAN": [
             6,
             8,
@@ -79,6 +87,7 @@
     {
         "id": 8,
         "name": "PA3",
+        "latency": 0,
         "connectedWAN": [
             7,
             10,
@@ -89,6 +98,7 @@
     {
         "id": 9,
         "name": "PA4",
+        "latency": 0,
         "connectedWAN": [
             1,
             3,
@@ -100,6 +110,7 @@
     {
         "id": 10,
         "name": "AP1",
+        "latency": 0,
         "connectedWAN": [
             6,
             8
@@ -109,6 +120,7 @@
     {
         "id": 11,
         "name": "MA1",
+        "latency": 0,
         "connectedWAN": [
             8,
             12,
@@ -119,6 +131,7 @@
     {
         "id": 12,
         "name": "MA2",
+        "latency": 0,
         "connectedWAN": [
             11,
             14
@@ -128,6 +141,7 @@
     {
         "id": 13,
         "name": "PI1",
+        "latency": 0,
         "connectedWAN": [
             11,
             15
@@ -137,6 +151,7 @@
     {
         "id": 14,
         "name": "PI2",
+        "latency": 0,
         "connectedWAN": [
             12,
             23
@@ -146,6 +161,7 @@
     {
         "id": 15,
         "name": "CE1",
+        "latency": 0,
         "connectedWAN": [
             13,
             16,
@@ -156,6 +172,7 @@
     {
         "id": 16,
         "name": "RN1",
+        "latency": 0,
         "connectedWAN": [
             15,
             17
@@ -165,6 +182,7 @@
     {
         "id": 17,
         "name": "PB1",
+        "latency": 0,
         "connectedWAN": [
             16,
             19
@@ -174,6 +192,7 @@
     {
         "id": 18,
         "name": "PE1",
+        "latency": 0,
         "connectedWAN": [
             15,
             19,
@@ -185,6 +204,7 @@
     {
         "id": 19,
         "name": "AL1",
+        "latency": 0,
         "connectedWAN": [
             17,
             18
@@ -194,6 +214,7 @@
     {
         "id": 20,
         "name": "SE1",
+        "latency": 0,
         "connectedWAN": [
             18
         ],
@@ -202,6 +223,7 @@
     {
         "id": 21,
         "name": "BA1",
+        "latency": 0,
         "connectedWAN": [
             22,
             23,
@@ -212,6 +234,7 @@
     {
         "id": 22,
         "name": "BA2",
+        "latency": 0,
         "connectedWAN": [
             18,
             21
@@ -221,6 +244,7 @@
     {
         "id": 23,
         "name": "TO1",
+        "latency": 0,
         "connectedWAN": [
             14,
             21,
@@ -231,6 +255,7 @@
     {
         "id": 24,
         "name": "MT1",
+        "latency": 0,
         "connectedWAN": [
             5,
             9,
@@ -242,6 +267,7 @@
     {
         "id": 25,
         "name": "MT2",
+        "latency": 0,
         "connectedWAN": [
             7,
             24,
@@ -252,6 +278,7 @@
     {
         "id": 26,
         "name": "MT3",
+        "latency": 0,
         "connectedWAN": [
             24,
             34
@@ -261,6 +288,7 @@
     {
         "id": 27,
         "name": "GO1",
+        "latency": 0,
         "connectedWAN": [
             23,
             25,
@@ -271,6 +299,7 @@
     {
         "id": 28,
         "name": "GO2",
+        "latency": 0,
         "connectedWAN": [
             27,
             29,
@@ -282,6 +311,7 @@
     {
         "id": 29,
         "name": "DF1",
+        "latency": 0,
         "connectedWAN": [
             28,
             30
@@ -291,6 +321,7 @@
     {
         "id": 30,
         "name": "MG1",
+        "latency": 0,
         "connectedWAN": [
             21,
             29,
@@ -302,6 +333,7 @@
     {
         "id": 31,
         "name": "MG2",
+        "latency": 0,
         "connectedWAN": [
             30,
             33,
@@ -312,6 +344,7 @@
     {
         "id": 32,
         "name": "ES1",
+        "latency": 0,
         "connectedWAN": [
             30,
             33
@@ -321,6 +354,7 @@
     {
         "id": 33,
         "name": "RJ1",
+        "latency": 0,
         "connectedWAN": [
             31,
             32
@@ -330,6 +364,7 @@
     {
         "id": 34,
         "name": "MS1",
+        "latency": 0,
         "connectedWAN": [
             26,
             28,
@@ -340,6 +375,7 @@
     {
         "id": 35,
         "name": "MS2",
+        "latency": 0,
         "connectedWAN": [
             34,
             38
@@ -349,6 +385,7 @@
     {
         "id": 36,
         "name": "SP1",
+        "latency": 0,
         "connectedWAN": [
             28,
             37
@@ -358,6 +395,7 @@
     {
         "id": 37,
         "name": "SP2",
+        "latency": 0,
         "connectedWAN": [
             31,
             36,
@@ -368,6 +406,7 @@
     {
         "id": 38,
         "name": "PR1",
+        "latency": 0,
         "connectedWAN": [
             35,
             39,
@@ -378,6 +417,7 @@
     {
         "id": 39,
         "name": "SC1",
+        "latency": 0,
         "connectedWAN": [
             37,
             38
@@ -387,6 +427,7 @@
     {
         "id": 40,
         "name": "RS1",
+        "latency": 0,
         "connectedWAN": [
             38
         ],
