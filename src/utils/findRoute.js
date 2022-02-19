@@ -1,4 +1,4 @@
-let nodeParents = new Array(50);
+let nodeParents = {};
 
 export const findRouteBFS = (startLAN, endLAN, networkGraph) => {
   const queue = [];
@@ -30,10 +30,59 @@ export const findRouteBFS = (startLAN, endLAN, networkGraph) => {
   }
 };
 
+export const findRouteDijkstra = (startLAN, endLAN, networkGraph) => {
+  const startNODE = networkGraph[startLAN].router
+  const endNODE = networkGraph[endLAN].router
+  const costs = {}
+  const processed = []
+
+  costs[endNODE] = Infinity
+  nodeParents[endNODE] = null
+
+  nodeParents[endLAN] = endNODE;
+  nodeParents[startNODE] = startLAN;
+  costs[startNODE] = networkGraph[startNODE].latency
+
+  let lowest = lowestCostNode(costs, processed);
+
+  while (lowest) {
+    let cost = costs[lowest];
+    let children = networkGraph[lowest].connectedWAN;
+    
+
+    children.forEach(n => {
+      let newCost = cost + networkGraph[n].latency;
+
+      if (!costs.hasOwnProperty(n) || costs[n] > newCost) {
+        costs[n] = newCost;
+        nodeParents[n] = lowest;
+      }
+
+    })
+    processed.push(lowest);
+    lowest = lowestCostNode(costs, processed);
+  }
+
+  return showPath(startLAN, endLAN, networkGraph);
+}
+
+const lowestCostNode = (costs, processed) => {
+  return Object.keys(costs).reduce((lowest, node) => {
+    if (lowest === null || costs[node] < costs[lowest]) {
+      if (!processed.includes(node)) {
+        lowest = node;
+      }
+    }
+    return lowest;
+  }, null);
+};
+
 const showPath = (startLAN, endLAN, networkGraph) => {
   const path = [];
   let nodeParent = networkGraph[endLAN].id;
+  
   while (nodeParent !== startLAN) {
+    console.log(networkGraph[nodeParent].name)
     path.unshift(networkGraph[nodeParent].name);
     nodeParent = nodeParents[nodeParent];
   }

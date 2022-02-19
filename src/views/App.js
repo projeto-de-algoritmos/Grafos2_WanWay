@@ -1,5 +1,5 @@
 import * as React from "react";
-import { findRouteBFS } from "../utils/findRoute";
+import { findRouteBFS, findRouteDijkstra } from "../utils/findRoute";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import SearchIcon from "@mui/icons-material/Search";
@@ -49,16 +49,16 @@ function App() {
 
   const handleRedeInicial = (e, newValue) => {
     setInitialNetwork(newValue.id);
-    console.log(e);
+    // console.log(e);
   };
 
   const handleRedeFinal = (e, newValue) => {
     setFinalNetwork(newValue.id);
-    console.log(e);
+    // console.log(e);
   };
 
   const handlePesquisa = () => {
-    const spottedRoute = findRouteBFS(initialNetwork, finalNetwork, networkGraph)
+    const spottedRoute = findRouteDijkstra(initialNetwork, finalNetwork, networkGraph)
     let result = ""
 
     result += `${spottedRoute[0]} `
@@ -81,7 +81,7 @@ function App() {
       if(networkGraph.find(elGraph => elGraph.name === newRoute[aux + 1]).latency){
       const latencyConection = networkGraph.find(elGraph => elGraph.name === newRoute[aux + 1]).latency
       latency = latency + (latencyConection * 500)
-      console.log(latencyConection + latency)
+      // console.log(latencyConection + latency)
     }
       
       setTimeout(() => {
