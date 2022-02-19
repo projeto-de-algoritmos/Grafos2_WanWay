@@ -1,8 +1,6 @@
-const networkGraph = require("../data/graph.json");
-
 let nodeParents = new Array(50);
 
-export const findRouteBFS = (startLAN, endLAN) => {
+export const findRouteBFS = (startLAN, endLAN, networkGraph) => {
   const queue = [];
   const visited = [];
   const startNODE = networkGraph[startLAN].router;
@@ -17,7 +15,7 @@ export const findRouteBFS = (startLAN, endLAN) => {
 
     if (visiting.connectedLAN.find((el) => endLAN === el) !== undefined) {
       nodeParents[endLAN] = visiting.id;
-      return showPath(startLAN, endLAN);
+      return showPath(startLAN, endLAN, networkGraph);
     }
 
     visiting.connectedWAN.forEach((indexNeighbor) => {
@@ -32,7 +30,7 @@ export const findRouteBFS = (startLAN, endLAN) => {
   }
 };
 
-const showPath = (startLAN, endLAN) => {
+const showPath = (startLAN, endLAN, networkGraph) => {
   const path = [];
   let nodeParent = networkGraph[endLAN].id;
   while (nodeParent !== startLAN) {
