@@ -22,22 +22,26 @@ function App() {
   );
   const cities = loadCities();
 
-  function changeWanLatency(currentLatency){
-    return (currentLatency + 1 ) % 4
+  function changeWanLatency(currentLatency) {
+    return (currentLatency + 1) % 4
   }
 
   React.useEffect(() => {
+    const colors = [COLORS.green, COLORS.yellow, COLORS.orange, COLORS.red]
+
     document.querySelectorAll(`circle[class="WAN"]`).forEach((el) =>
       el.addEventListener(
         "click",
         function () {
           var currentLatency = el.getAttribute("latency");
-          el.setAttribute("latency", changeWanLatency(parseInt(currentLatency)).toString());
-          console.log(`${el.getAttribute("id")} : ${currentLatency} latencia atual`);
+          currentLatency = changeWanLatency(parseInt(currentLatency)).toString()
+          el.setAttribute("latency", currentLatency);
+          el.style.fill = colors[currentLatency]
         },
         false
       )
     );
+
   }, []);
 
   const handleRedeInicial = (e, newValue) => {
@@ -73,7 +77,7 @@ function App() {
 
       setTimeout(() => {
         document.querySelector(`line[id="${connection[0] + '-' + connection[1]}"]`).style.stroke = COLORS.orangelight;
-      }, 250*aux)
+      }, 250 * aux)
     }
 
 
