@@ -10,17 +10,15 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Map from "../components/Map";
 import Logo from "../assets/logo.svg";
-import "./App.css";
 import { loadCities } from "../utils/loadCities";
 import { COLORS } from "../assets/colors";
 import UseRadioGroup from "../components/RadioGroup";
+import LatencyLabel from "../assets/latencyLabel.svg";
+import "./App.css";
 
 function App() {
   const [initialNetwork, setInitialNetwork] = React.useState(0);
   const [finalNetwork, setFinalNetwork] = React.useState(0);
-  const [route, setRoute] = React.useState(
-    "Preencha os dados e encontre uma rota de internet entre as duas cidades!"
-  );
   const [selectedAlgorithm, setSelectedAlgorithm] = React.useState("BFS");
   const cities = loadCities();
   const networkGraph = require("../data/graph.json");
@@ -74,15 +72,7 @@ function App() {
   };
 
   const handlePesquisa = () => {
-    const spottedRoute = whatAlgorithm()
-
-    let result = "";
-    result += `${spottedRoute[0]} `;
-    for (let aux = 1; aux < spottedRoute.length; aux++) {
-      result += `► ${spottedRoute[aux]}`;
-    }
-
-    setRoute(result);
+    const spottedRoute = whatAlgorithm();
     changeRouteColor(spottedRoute);
   };
 
@@ -141,10 +131,10 @@ function App() {
             </Box>
             <Typography
               sx={{ fontSize: 16 }}
-              color="text.secondary"
+              color="black"
               variant="h4"
               textAlign={"center"}
-              marginTop="5%"
+              margin={"5%"}
             >
               Selecione a rede inicial e a rede destino para encontrar o menor
               caminho.
@@ -184,7 +174,7 @@ function App() {
         </Grid>
         <Grid item xs={9.5}>
           <Box sx={{ height: "100%" }}>
-            <Grid container direction="column" sx={{ height: "100%" }}>
+            <Grid sx={{ height: "100%" }}>
               <Grid
                 item
                 xs={12}
@@ -192,12 +182,23 @@ function App() {
                 sx={{
                   width: "100%",
                   display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
                   backgroundColor: COLORS.lightgrey,
                 }}
               >
                 <Map />
+                <Box
+                  sx={{
+                    width: "auto",
+                    height: "auto",
+                    bottom: 0,
+                    right: 0,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    position: "absolute",
+                  }}
+                >
+                  <img src={LatencyLabel} />
+                </Box>
               </Grid>
             </Grid>
           </Box>
