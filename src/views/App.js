@@ -8,43 +8,50 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Map from "../components/Map"
+import Map from "../components/Map";
 import Logo from "../assets/logo.svg";
-import "./App.css";
 import { loadCities } from "../utils/loadCities";
 import { COLORS } from "../assets/colors";
+import UseRadioGroup from "../components/RadioGroup";
+import LatencyLabel from "../assets/latencyLabel.svg";
+import "./App.css";
 
 function App() {
   const [initialNetwork, setInitialNetwork] = React.useState(0);
   const [finalNetwork, setFinalNetwork] = React.useState(0);
-  const [route, setRoute] = React.useState(
-    "Preencha os dados e encontre uma rota de internet entre as duas cidades!"
-  );
+  const [selectedAlgorithm, setSelectedAlgorithm] = React.useState("BFS");
   const cities = loadCities();
   const networkGraph = require("../data/graph.json");
 
   function changeWanLatency(currentLatency) {
-    return (currentLatency + 1) % 4
+    return (currentLatency + 1) % 4;
   }
 
   React.useEffect(() => {
-    const colors = [COLORS.green, COLORS.yellow, COLORS.orange, COLORS.red]
+    const colors = [COLORS.green, COLORS.yellow, COLORS.orange, COLORS.red];
 
     document.querySelectorAll(`circle[class="WAN"]`).forEach((el) =>
       el.addEventListener(
         "click",
         function () {
           var currentLatency = el.getAttribute("latency");
-          currentLatency = changeWanLatency(parseInt(currentLatency)).toString()
+          currentLatency = changeWanLatency(
+            parseInt(currentLatency)
+          ).toString();
           el.setAttribute("latency", currentLatency);
-          el.style.fill = colors[currentLatency]
-          networkGraph.find(elGraph => elGraph.name === el.getAttribute("id")).latency = parseInt(currentLatency)
-          console.log(networkGraph.find(elGraph => elGraph.name === el.getAttribute("id")))
+          el.style.fill = colors[currentLatency];
+          networkGraph.find(
+            (elGraph) => elGraph.name === el.getAttribute("id")
+          ).latency = parseInt(currentLatency);
+          console.log(
+            networkGraph.find(
+              (elGraph) => elGraph.name === el.getAttribute("id")
+            )
+          );
         },
         false
       )
     );
-
   }, []);
 
   const handleRedeInicial = (e, newValue) => {
@@ -57,39 +64,45 @@ function App() {
     // console.log(e);
   };
 
-  const handlePesquisa = () => {
-    const spottedRoute = findRouteDijkstra(initialNetwork, finalNetwork, networkGraph)
-    let result = ""
-
-    result += `${spottedRoute[0]} `
-    for (let aux = 1; aux < spottedRoute.length; aux++) {
-      result += `► ${spottedRoute[aux]}`;
+  const whatAlgorithm = () => {
+    if (selectedAlgorithm === "BFS") {
+      return findRouteBFS(initialNetwork, finalNetwork, networkGraph);
     }
+    return findRouteDijkstra(initialNetwork, finalNetwork, networkGraph);
+  };
 
-    setRoute(result);
+  const handlePesquisa = () => {
+    const spottedRoute = whatAlgorithm();
     changeRouteColor(spottedRoute);
   };
 
   function changeRouteColor(newRoute) {
-    document.querySelectorAll(`line[class="connection"]`).forEach(el => el.style.stroke = COLORS.oceanblueWAN)
-    let latency = 0
+    document
+      .querySelectorAll(`line[class="connection"]`)
+      .forEach((el) => (el.style.stroke = COLORS.oceanblueWAN));
+    let latency = 0;
 
     for (let aux = 0; aux < newRoute.length - 1; aux++) {
-      let connection = [newRoute[aux], newRoute[aux + 1]]
-      connection = connection.sort()
+      let connection = [newRoute[aux], newRoute[aux + 1]];
+      connection = connection.sort();
 
-      if(networkGraph.find(elGraph => elGraph.name === newRoute[aux + 1]).latency){
-      const latencyConection = networkGraph.find(elGraph => elGraph.name === newRoute[aux + 1]).latency
-      latency = latency + (latencyConection * 500)
-      // console.log(latencyConection + latency)
-    }
-      
+      if (
+        networkGraph.find((elGraph) => elGraph.name === newRoute[aux + 1])
+          .latency
+      ) {
+        const latencyConection = networkGraph.find(
+          (elGraph) => elGraph.name === newRoute[aux + 1]
+        ).latency;
+        latency = latency + latencyConection * 500;
+        // console.log(latencyConection + latency)
+      }
+
       setTimeout(() => {
-        document.querySelector(`line[id="${connection[0] + '-' + connection[1]}"]`).style.stroke = COLORS.orangelight;
-      }, latency)
+        document.querySelector(
+          `line[id="${connection[0] + "-" + connection[1]}"]`
+        ).style.stroke = COLORS.orangelight;
+      }, latency);
     }
-
-
   }
 
   return (
@@ -118,10 +131,10 @@ function App() {
             </Box>
             <Typography
               sx={{ fontSize: 16 }}
-              color="text.secondary"
+              color="black"
               variant="h4"
               textAlign={"center"}
-              marginTop="5%"
+              margin={"5%"}
             >
               Selecione a rede inicial e a rede destino para encontrar o menor
               caminho.
@@ -140,11 +153,14 @@ function App() {
               disablePortal
               options={cities}
               getOptionLabel={(cities) => cities.name}
-              sx={{ marginTop: "10%", width: "80%" }}
+              sx={{ marginTop: "10%", marginBottom: "10%", width: "80%" }}
               renderInput={(params) => (
                 <TextField {...params} label="Rede Destino" />
               )}
               onChange={handleRedeFinal}
+            />
+            <UseRadioGroup
+              callbackValue={(value) => setSelectedAlgorithm(value)}
             />
             <Button
               variant="contained"
@@ -158,60 +174,31 @@ function App() {
         </Grid>
         <Grid item xs={9.5}>
           <Box sx={{ height: "100%" }}>
-            <Grid
-              container
-              direction="column"
-              sx={{ height: "100%" }}
-            >
+            <Grid sx={{ height: "100%" }}>
               <Grid
                 item
-                xs={9}
+                xs={12}
                 alignSelf={"center"}
                 sx={{
                   width: "100%",
                   display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
                   backgroundColor: COLORS.lightgrey,
                 }}
               >
                 <Map />
-              </Grid>
-              <Grid item xs={2}>
-                <Card
-                  variant="outlined"
+                <Box
                   sx={{
-                    height: "fill-available",
-                    backgroundColor: COLORS.beige,
+                    width: "auto",
+                    height: "auto",
+                    bottom: 0,
+                    right: 0,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    position: "absolute",
                   }}
                 >
-                  <Typography
-                    variant="h4"
-                    color="text.secondary"
-                    component="div"
-                    sx={{
-                      fontSize: 24,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    Menor Rota
-                  </Typography>
-                  <Typography
-                    variant="h6"
-                    component="div"
-                    sx={{
-                      fontSize: 18,
-                      height: "fill-available",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {route}
-                  </Typography>
-                </Card>
+                  <img src={LatencyLabel} />
+                </Box>
               </Grid>
             </Grid>
           </Box>
