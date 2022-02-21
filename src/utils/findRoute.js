@@ -41,7 +41,7 @@ export const findRouteDijkstra = (startLAN, endLAN, networkGraph) => {
 
   nodeParents[endLAN] = endNODE;
   nodeParents[startNODE] = startLAN;
-  costs[startNODE] = networkGraph[startNODE].latency
+  costs[startNODE] = networkGraph[startNODE].latency + 1;
 
   let lowest = lowestCostNode(costs, processed);
 
@@ -51,7 +51,7 @@ export const findRouteDijkstra = (startLAN, endLAN, networkGraph) => {
     
 
     children.forEach(n => {
-      let newCost = cost + networkGraph[n].latency;
+      let newCost = cost + networkGraph[n].latency + 1;
 
       if (!costs.hasOwnProperty(n) || costs[n] > newCost) {
         costs[n] = newCost;
@@ -82,7 +82,7 @@ const showPath = (startLAN, endLAN, networkGraph) => {
   let nodeParent = networkGraph[endLAN].id;
   
   while (nodeParent !== startLAN) {
-    console.log(networkGraph[nodeParent].name)
+    // console.log(networkGraph[nodeParent].name)
     path.unshift(networkGraph[nodeParent].name);
     nodeParent = nodeParents[nodeParent];
   }

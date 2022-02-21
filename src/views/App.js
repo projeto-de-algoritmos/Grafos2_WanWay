@@ -43,11 +43,11 @@ function App() {
           networkGraph.find(
             (elGraph) => elGraph.name === el.getAttribute("id")
           ).latency = parseInt(currentLatency);
-          console.log(
-            networkGraph.find(
-              (elGraph) => elGraph.name === el.getAttribute("id")
-            )
-          );
+          // console.log(
+          //   networkGraph.find(
+          //     (elGraph) => elGraph.name === el.getAttribute("id")
+          //   )
+          // );
         },
         false
       )
@@ -92,8 +92,8 @@ function App() {
       ) {
         const latencyConection = networkGraph.find(
           (elGraph) => elGraph.name === newRoute[aux + 1]
-        ).latency;
-        latency = latency + latencyConection * 500;
+        ).latency + 1;
+        latency += latencyConection * 100;
         // console.log(latencyConection + latency)
       }
 
