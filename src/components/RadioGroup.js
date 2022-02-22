@@ -24,7 +24,7 @@ export default function ControlledRadioButtonsGroup(props) {
         onChange={handleChange}
       >
         <FormControlLabel value="BFS" control={<Radio />} label="BFS" />
-        <FormControlLabel value="Djikstra" control={<Radio />} label="Djikstra" />
+        <FormControlLabel value="Dijkstra" control={<Radio />} label="Dijkstra" />
       </RadioGroup>
     </FormControl>
     </>

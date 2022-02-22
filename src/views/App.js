@@ -136,7 +136,7 @@ function App() {
               textAlign={"center"}
               margin={"5%"}
             >
-              Selecione a rede inicial e a rede destino para encontrar o menor
+              Selecione a rede inicial e a rede destino para encontrar o {selectedAlgorithm === "BFS" ? "menor " : "melhor "}
               caminho.
             </Typography>
             <Autocomplete
