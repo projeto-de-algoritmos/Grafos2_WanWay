@@ -10,9 +10,14 @@
 | 19/0019085  |  Rafael Cleydson da Silva Ramos |
 
 ## Sobre 
-O projeto WanWay tem como objetivo selecionar o caminho mais rápido para que uma comunicação entre redes de internet ocorra.
+O projeto WanWay tem como objetivo encontrar o caminho para que uma comunicação entre redes de internet ocorra. São oferecidas duas opções de algoritmos. Utilizando o algoritmo BFS encontra-se o caminho mais curto e utilizando o algoritmo de Dijkstra encontra-se o caminho mais rápido.
+
+O usuário pode alterar o valor da latência de uma rede WAN ao clicar sobre ela, isso faz com que haja o incremento de um tempo para que a comunicação com o ponto seja concluída.
 
 ## Screenshots
+![image](https://user-images.githubusercontent.com/54921791/155055138-f39221e6-d4fa-4ac9-ac09-5c0fdc1bdc96.png)
+![image](https://user-images.githubusercontent.com/54921791/155055252-03a43702-b33d-4968-ac77-dbe5cc95abdd.png)
+![image](https://user-images.githubusercontent.com/54921791/155055289-8e862a81-4b7b-4b3a-92c1-54b75b8687ce.png)
 
 
 ## Instalação 
@@ -39,4 +44,6 @@ O projeto WanWay tem como objetivo selecionar o caminho mais rápido para que um
 ## Uso 
 1. Selecione uma rede inicial
 2. Selecione uma rede destino
-3. Acione o botão "Encontrar"
+3. Selecione o algoritmo
+4. Clica nas WANs para alterar a latência
+5. Acione o botão "Encontrar"
